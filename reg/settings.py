@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'shop',
     'cart',
+    'account',
 ]
 
 MIDDLEWARE = [
@@ -70,8 +71,8 @@ WSGI_APPLICATION = 'reg.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'aibek1',
-        'USER': 'aibek1',
+        'NAME': 'aibek2',
+        'USER': 'aibek2',
         'PASSWORD': 'password',
         'HOST': 'localhost',
         'PORT': '5432',
@@ -119,3 +120,7 @@ STATIC_URL = '/static/'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
+LOGIN_REDIRECT_URL = 'dashboard'
+LOGIN_URL = 'login'
+LOGOUT_URL = 'logout'
